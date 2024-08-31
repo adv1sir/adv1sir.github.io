@@ -14,6 +14,7 @@
                 <ul>
                     <li><a href="#home">Главная</a></li>
                     <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
@@ -34,10 +35,37 @@
         </div>
     </section>
 
+    <!-- Добавлена новая секция с галереей -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Галерея</h2>
+            <div class="gallery-grid">
+                <img src="images/photo1.jpg" alt="Фото 1">
+                <img src="images/photo2.jpg" alt="Фото 2">
+                <img src="images/photo3.jpg" alt="Фото 3">
+                <!-- Добавь больше фотографий по желанию -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Обновлена секция с формой обратной связи -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Контакты</h2>
-            <p>Свяжитесь со мной по адресу <a href="mailto:example@example.com">adv1sir337@gmail.com</a></p>
+            <p>Свяжитесь со мной по адресу <a href="mailto:adv1sir337@gmail.com">adv1sir337@gmail.com</a></p>
+            
+            <form action="mailto:adv1sir337@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Отправить</button>
+            </form>
         </div>
     </section>
 
@@ -47,4 +75,4 @@
         </div>
     </footer>
 </body>
-</html> 
+</html>
