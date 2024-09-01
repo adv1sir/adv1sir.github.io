@@ -9,12 +9,13 @@
 <body>
     <header>
         <div class="container">
-            <img src="images/IMG_3255 (1).jpg" alt="Logo" class="logo">
+            <img src="images/logo.png" alt="My photo" class="logo">
             <nav>
                 <ul>
                     <li><a href="#home">Главная</a></li>
                     <li><a href="#about">Обо мне</a></li>
                     <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#projects">Мои проекты</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
@@ -24,18 +25,18 @@
     <section id="home" class="home">
         <div class="container">
             <h1>Добро пожаловать на сайт!</h1>
-            <p>Это сделано с помощью рук робота специально чтоб показать как работать с гитхаб/пейджс.</p>
+            <p>Это сделано с помощью рук робота специально, чтобы показать, как работать с GitHub Pages.</p>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
             <h2>Обо мне</h2>
-            <p>Меня зовут Ростислав, я люблю животных.</p>
+            <img src="images/rostik.jpg" alt="Фото Ростислава" class="profile-photo">
+            <p>Меня зовут Ростислав. Я программист, увлекаюсь созданием сайтов и разработкой игр. В свободное время люблю гулять с собакой и заниматься фотографией.</p>
         </div>
     </section>
 
-    <!-- Добавлена новая секция с галереей -->
     <section id="gallery" class="gallery">
         <div class="container">
             <h2>Галерея</h2>
@@ -48,12 +49,28 @@
         </div>
     </section>
 
-    <!-- Обновлена секция с формой обратной связи -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Мои проекты</h2>
+            <p>Здесь я делюсь своими любимыми проектами и идеями:</p>
+            <ul>
+                <li>Проект 1: Создание веб-сайта для благотворительной организации.</li>
+                <li>Проект 2: Разработка игры на Unity.</li>
+                <!-- Добавь другие проекты -->
+            </ul>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <h2>Контакты</h2>
             <p>Свяжитесь со мной по адресу <a href="mailto:adv1sir337@gmail.com">adv1sir337@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+            </div>
             
+            <!-- Форма обратной связи -->
             <form action="mailto:adv1sir337@gmail.com" method="post" enctype="text/plain">
                 <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" required>
