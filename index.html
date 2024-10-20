@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rostik^_^</title>
+    <meta name="description" content="Персональный сайт Ростислава, разработчика и любителя животных.">
+    <meta name="keywords" content="Ростислав, персональный сайт, разработка, программирование">
+    <meta property="og:title" content="Сайт Ростислава">
+    <meta property="og:description" content="Персональный сайт разработчика и программиста Ростислава.">
+    <meta property="og:image" content="images/rostik.jpg">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <div class="theme-switch">
+        <label>
+            <input type="checkbox" id="theme-toggle">
+            Переключить тему
+        </label>
+    </div>
+
     <header>
         <div class="container">
             <img src="images/logo.png" alt="My photo" class="logo">
@@ -16,6 +28,7 @@
                     <li><a href="#about">Обо мне</a></li>
                     <li><a href="#gallery">Галерея</a></li>
                     <li><a href="#projects">Мои проекты</a></li>
+                    <li><a href="#blog">Блог</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
@@ -33,7 +46,7 @@
         <div class="container">
             <h2>Обо мне</h2>
             <img src="images/rostik.jpg" alt="Фото Ростислава" class="profile-photo">
-            <p>Меня зовут Ростислав. Я программист, увлекаюсь созданием сайтов и разработкой игр. В свободное время люблю гулять и заниматься фотографией.</p>
+            <p>Меня зовут Ростислав. Я программист, увлекаюсь созданием сайтов и разработкой игр. В свободное время люблю гулять с собакой и заниматься фотографией.</p>
         </div>
     </section>
 
@@ -41,9 +54,9 @@
         <div class="container">
             <h2>Галерея</h2>
             <div class="gallery-grid">
-                <img src="images/photo1.jpg" alt="Фото 1">
-                <img src="images/photo2.jpg" alt="Фото 2">
-                <img src="images/photo3.jpg" alt="Фото 3">
+                <img src="images/photo1.jpg" alt="Фото 1" onclick="openModal('images/photo1.jpg')">
+                <img src="images/photo2.jpg" alt="Фото 2" onclick="openModal('images/photo2.jpg')">
+                <img src="images/photo3.jpg" alt="Фото 3" onclick="openModal('images/photo3.jpg')">
                 <!-- Добавь больше фотографий по желанию -->
             </div>
         </div>
@@ -61,13 +74,24 @@
         </div>
     </section>
 
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Мой блог</h2>
+            <article>
+                <h3>Первая запись в блоге</h3>
+                <p>Сегодня я закончил свой новый проект...</p>
+            </article>
+            <!-- Добавь другие записи -->
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <h2>Контакты</h2>
             <p>Свяжитесь со мной по адресу <a href="mailto:adv1sir337@gmail.com">adv1sir337@gmail.com</a></p>
             <div class="social-links">
-                <a href="https://github.com/adv1sir" target="_blank">GitHub</a>
-                <a href="https://instagram.com/disafffectation" target="_blank">Instagram</a>
+                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
             </div>
             
             <!-- Форма обратной связи -->
@@ -91,5 +115,32 @@
             <p>&copy; 2024 Мой GitHub Сайт. Все права защищены.</p>
         </div>
     </footer>
+
+    <!-- Модальное окно для галереи -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" class="modal-content">
+    </div>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggle.addEventListener('change', () => {
+            body.classList.toggle('dark');
+        });
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
